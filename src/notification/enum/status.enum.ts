@@ -1,0 +1,10 @@
+export enum Status {
+  DELIVRD = 'DELIVRD',
+  UNDELIV = 'UNDELIV',
+  EXPIRED = 'EXPIRED',
+  BLIST = 'BLIST',
+  SUBMITD = 'SUBMITD',
+  STAGED = 'STAGED',
+  CANCELLED = 'CANCELLED',
+  NOROUTE = 'NOROUTE',
+}
