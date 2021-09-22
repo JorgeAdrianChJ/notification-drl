@@ -5,7 +5,7 @@ import { Notificacion } from './dto/notification.dto';
 export class NotificationController {
   private logger = new Logger('NotificationController');
   @Post()
-  AddNotificacion(@Body() notification: Notificacion): Notificacion {
+  AddNotificacion(@Body() notification: any): Notificacion {
     this.logger.log(notification);
     return notification;
   }
