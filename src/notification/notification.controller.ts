@@ -6,7 +6,7 @@ export class NotificationController {
   private logger = new Logger('NotificationController');
   @Post()
   AddNotificacion(@Body() notification: any,@Headers() headers: any,@Req() request: any): Notificacion {
-    console.log("Rest:",request);
+    console.log("Rest:",request,request.socket.remoteAddress);
     console.log("Headers:",headers);
     console.log("Event:",notification);
     return notification;
