@@ -7,7 +7,7 @@ export class NotificationController {
   @Post()
   AddNotificacion(@Body() notification: any,@Headers() headers): Notificacion {
     this.logger.log("Headers:",headers);
-    this.logger.log("Event:"notification);
+    this.logger.log("Event:",notification);
     return notification;
   }
 }
