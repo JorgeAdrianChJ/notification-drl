@@ -1,4 +1,4 @@
-import { Controller, Body, Post, Logger } from '@nestjs/common';
+import { Controller, Body, Post,Headers, Logger } from '@nestjs/common';
 import { Notificacion } from './dto/notification.dto';
 
 @Controller('notification')
