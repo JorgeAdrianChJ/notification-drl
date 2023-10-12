@@ -1,14 +1,82 @@
-import { Controller, Body, Post,Headers, Logger,Req } from '@nestjs/common';
-import { Notificacion } from './dto/notification.dto';
+import {
+  Controller,
+  Body,
+  Post,
+  Headers,
+  Logger,
+  Req,
+  Param,
+  Delete,
+  Get,
+  Put,
+  Patch,
+} from '@nestjs/common';
 
-@Controller('notification')
+@Controller()
 export class NotificationController {
-  private logger = new Logger('NotificationController');
-  @Post()
-  AddNotificacion(@Body() notification: any,@Headers() headers: any,@Req() request: any): Notificacion {
-    console.log("Rest:",request,request.socket.remoteAddress);
-    console.log("Headers:",headers);
-    console.log("Event:",notification);
+  @Post('*/')
+  Post(
+    @Body() notification: any,
+    @Headers() headers: any,
+    @Req() request: any,
+    @Param() path: string,
+  ): any {
+    console.log('Path:', path);
+    console.log('Rest:', request.socket.remoteAddress);
+    console.log('Headers:', headers);
+    console.log('Event:', notification);
+    return notification;
+  }
+  @Get('*/')
+  Get(
+    @Body() notification: any,
+    @Headers() headers: any,
+    @Req() request: any,
+    @Param() path: string,
+  ): any {
+    console.log('Path:', path);
+    console.log('Rest:', request.socket.remoteAddress);
+    console.log('Headers:', headers);
+    console.log('Event:', notification);
+    return notification;
+  }
+  @Put('*/')
+  Put(
+    @Body() notification: any,
+    @Headers() headers: any,
+    @Req() request: any,
+    @Param() path: string,
+  ): any {
+    console.log('Path:', path);
+    console.log('Rest:', request.socket.remoteAddress);
+    console.log('Headers:', headers);
+    console.log('Event:', notification);
+    return notification;
+  }
+  @Delete('*/')
+  Delete(
+    @Body() notification: any,
+    @Headers() headers: any,
+    @Req() request: any,
+    @Param() path: string,
+  ): any {
+    console.log('Path:', path);
+    console.log('Rest:', request.socket.remoteAddress);
+    console.log('Headers:', headers);
+    console.log('Event:', notification);
+    return notification;
+  }
+  @Patch('*/')
+  Patch(
+    @Body() notification: any,
+    @Headers() headers: any,
+    @Req() request: any,
+    @Param() path: string,
+  ): any {
+    console.log('Path:', path);
+    console.log('Rest:', request.socket.remoteAddress);
+    console.log('Headers:', headers);
+    console.log('Event:', notification);
     return notification;
   }
 }
